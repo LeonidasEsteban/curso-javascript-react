@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: system-ui, Helvetica, sans-serif;
+  background-color: white;
+  text-align: center;
+}
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+  padding: 0 2em;
+}
+h1 {
+  font-size: 110px;
+  line-height: 100px;
+}
+
+.hero-content {
+  display: flex;
+  /* border: 1px solid red; */
+}
+.app {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  font-size: 2em;
+  text-align: left;
+}
+p {
+  display: flex;
+  justify-content: space-between;
+}
+.mac {
+  height: 700px;
+  flex: 1;
+  background: url('../images/mac.png') center top no-repeat;
+  background-size: contain;
+}
+
+.button {
+  color: white;
+  background: #3f69ff;
+  border: none;
+  font-size: 1em;
+  padding: .7em 2em;
+  border-radius: .5em;
+  font-weight: bold;
+  cursor: pointer;
+}
