@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Components</title>
+</head>
+
+<body>
+  <div id="container"></div>
+  <script>
+    function component(strings, ...dynamicValues) {
+      return function (props) {
+        let newContent = strings.slice()
+        console.log(newContent)
+        dynamicValues.forEach((value, index) => {
+          newContent[index] += props[value]
+        })
+        return newContent.join('')
+      }
+    }
+    const styled = {
+      h1: function (styles) {
+        return function (content) {
+          return `
+            <h1 style="${styles}">
+              ${content}
+            </h1>
+          `
+        }
+      },
+      h2: '',
+      div: '',
+    }
+
+    const TitleStyled = styled.h1`
+      font-family: system-ui;
+      color: orange;
+      font-size: 50px;
+      text-shadow: 2px 2px 0 black;
+      line-height: 100vh;
+    `
+
+    const props = {
+      message: 'No Te Rindas',
+    }
+
+    const Title = component`<marquee> ${'message'} </marquee>`(props)
+
+    function render(component, container) {
+      container.innerHTML = component
+    }
+
+    render(TitleStyled(Title), window.container)
+
+  </script>
+</body>
+
+</html>
