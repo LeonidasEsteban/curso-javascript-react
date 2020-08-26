@@ -4,18 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template Literals - Expresiones</title>
+  <title>Template Literals - expresiones</title>
 </head>
 
 <body>
-  <h1>Template Literals</h1>
   <script>
     const nombre = 'leonidas'
-    // const edad = 29
-    const bool = true
-    console.log(`mi nombre ${nombre} y tengo ${29 - 1} años, ${bool}`)
-    console.log(`${x = 'leonidas'}`)
-    console.log(`${(function name() { return 'leonidas' })()}`)
+    console.log(`Mi nombre es ${nombre}`)
+    console.log(`Mi nombre es ${29}`)
+    console.log(`Este es el ${'Curso de JavaScript para React'}`)
+    console.log(`Mi nombre es ${x = 'leonidas'}`)
+    console.log(`Mi nombre es ${(function name() { return 'Leo' })()}`)
+    console.log(`Mi nombre es ${(function () { return 'Leon' })()}`)
+    console.log(`Mi nombre es ${(() => { return 'Leon Arrow' })()}`)
+    console.log(`Mi nombre es ${true && 'leo ternario'}`)
+    console.log(`Mi nombre es ${false ? 'leo true' : 'leeo false'}`)
+    console.log(`Mi nombre es ${['a', 'b'].map(letra => `${letra}-styled`)}`)
   </script>
 </body>
 
