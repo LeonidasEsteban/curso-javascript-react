@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux</title>
+</head>
+
+<body>
+  <script>
+    const createStore = (reducer, initialState) => {
+      let state = initialState
+      let updater = () => { }
+      const getState = () => state
+
+      const dispatch = (action) => {
+        state = reducer(state, action)
+        updater()
+      }
+      const subscribe = (listener) => {
+        updater = listener
+      }
+      return {
+        getState,
+        dispatch,
+        subscribe
+      }
+    }
+
+    const reducer = (state, action) => {
+      return action
+    }
+    const store = createStore(reducer, 'estado inicial de la aplicación')
+    // store.dispatch()
+    // store.getState()
+    // store.subscribe()
+
+    store.subscribe(() => {
+      console.log('ha cambiado algo en el store', store.getState())
+    })
+    store.dispatch('voy a cambiar algo')
+
+  </script>
+</body>
+
+</html>
