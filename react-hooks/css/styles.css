@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: system-ui, Helvetica, sans-serif;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8f9fd;
+}
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+}
+h1 {
+  font-size: 110px;
+  line-height: 100px;
+}
+
+.button {
+  color: white;
+  background: #3f69ff;
+  border: none;
+  font-size: 1em;
+  padding: .7em 2em;
+  border-radius: .5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile {
+  flex: 1;
+}
+
+.profile-content {
+  height: 700px;
+  background: url('../images/user.png') center top no-repeat;
+  background-size: contain;
+  max-width: 350px;
+  margin: 1em auto;
+  border-radius: 1em;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+}
+.user {
+  padding-top: 30px;
+}
+img {
+  border-radius: 50%;
+}
+.details {
+  background: white;
+  padding: 1px;
+  font-size: 1.2em;
+}
+.social {
+  /* margin-top: 50px; */
+  padding: 1em 0;
+  font-weight: bold;
+  background: #f8f9fd;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bio {
+  display: flex;
+  background: white;
+}
+
+.city {
+  background: white;
+  margin: 0;
+  padding: 1em;
+}
+
