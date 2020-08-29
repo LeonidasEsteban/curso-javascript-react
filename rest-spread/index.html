@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest / Spread</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <main class="wrapper">
+    <h1>Icecream Machine <br> V2</h1>
+    <p>Elige los 2 sabores que más te gusten y haz tu orden</p>
+    <div class="icrecream-grid">
+      <div class="flavor" data-flavor="strawberry"></div>
+      <div class="flavor" data-flavor="chocolate"></div>
+      <div class="flavor" data-flavor="orange"></div>
+      <div class="flavor" data-flavor="vanilla"></div>
+      <div class="flavor" data-flavor="lemon"></div>
+    </div>
+    <button id="btn" class="button">Preparar Helado</button>
+  </main>
+
+
+  <script>
+    const $flavors = document.querySelectorAll('.flavor')
+    // console.log($flavors)
+    $flavors.forEach($el => $el.addEventListener('click', selectFlavor))
+    function selectFlavor() {
+      this.classList.toggle('is-active')
+    }
+    function isRequired(param) {
+      throw new Error(`${param} es requerido`)
+    }
+    // function makeIcecream(flavor1 = isRequired('flavor1'), flavor2 = isRequired('flavor2')) {
+    function makeIcecream([flavor1 = isRequired('flavor1'), flavor2 = isRequired('flavor2'), ...otherFlavors]) {
+      const toppings = otherFlavors.map((f) => f.dataset.flavor)
+      // console.log(toppings)
+      alert(`tienes un rico helado de ${flavor1.dataset.flavor} y ${flavor2.dataset.flavor} con toppings de ${toppings}`)
+    }
+    window.btn.addEventListener('click', () => {
+      const $flavors = document.querySelectorAll('.flavor.is-active')
+      // console.log($flavors)
+      try {
+        makeIcecream([...$flavors])
+      } catch (error) {
+        alert('Aun no completa los sabores para preparar tu helado')
+      }
+    })
+  </script>
+</body>
+
+</html>

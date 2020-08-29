@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: system-ui, Helvetica, sans-serif;
+  background-color: white;
+  text-align: center;
+  min-height: 100vh;
+  background: repeating-linear-gradient(-225deg, #a1f1c8, #a1f1c8 20px, white 20px, white 40px,#fdd1d0 40px, #fdd1d0 60px, white 60px, white 80px);
+}
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+}
+/* #d0d6f6
+white
+#d1d9fd */
+h1 {
+  font-size: 110px;
+  line-height: 100px;
+}
+
+.hero-content {
+  display: flex;
+  /* border: 1px solid red; */
+}
+.app {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  font-size: 2em;
+  text-align: left;
+}
+p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+}
+.mac {
+  height: 700px;
+  flex: 1;
+  background: url('../images/mac.png') center top no-repeat;
+  background-size: contain;
+}
+
+.button {
+  color: white;
+  background: #3f69ff;
+  border: none;
+  font-size: 2em;
+  padding: .7em 2em;
+  border-radius: .5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.icrecream-grid {
+  display: grid;
+  grid-template-columns: auto-fit;
+  grid-auto-flow: column;
+  margin-bottom: 1em;
+}
+
+.icrecream-grid .flavor {
+  height: 50px;
+}
+.flavor {
+  transition: .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+.flavor.is-active {
+  border: 5px dashed greenyellow;
+}
+.flavor:hover {
+  z-index: 1;
+  transform: scale(1.2);
+}
+.flavor:before {
+  content: attr(data-flavor);
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 black;
+}
+
+[data-flavor="strawberry"] {
+  background: red;
+}
+[data-flavor="chocolate"] {
+  background: brown;
+}
+[data-flavor="vanilla"] {
+  background: #f3e5ab;
+}
+[data-flavor="orange"] {
+  background: orange;
+}
+[data-flavor="lemon"] {
+  background: lime;
+}
+
