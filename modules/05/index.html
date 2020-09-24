@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
+
+  <title>Dynamic Imports</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Lanzamiento del PS5</h1>
+    <p>
+      Ya es oficial. Sony acaba de desvelar el precio oficial de su nueva PlayStation 5: 499,99 euros para la
+      PlayStation 5
+      con lector de discos y 399,99 euros para la versión completamente digital. De esa forma, la compañía nipona deja
+      el
+      modelo más completo a la altura de la Xbox Series X, mientras que supera en precio al modelo más asequible de
+      Microsoft,
+      la Xbox Series S, que se queda en 299 euros.
+    </p>
+    <h2>Mira la transimisión en vivo</h2>
+    <div class="video" id="video">
+      <img src="./images/ps5.jpeg" alt="">
+    </div>
+    <video class="video-js vjs-theme-city hidden" id="ps5" width="720" height="480">
+      <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4"
+        type="video/mp4" />
+    </video>
+  </div>
+  <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>
