@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlockBuster</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <img src="./images/logo.png" alt="">
+    </div>
+  </header>
+  <section class="wrapper">
+    <div class="actions">
+      <form action="" id="search-form">
+        <input placeholder="Escribe tu película favorita" name="title" type="Busca una pelicula" />
+        <button>Buscar</button>
+      </form>
+      <button id="recommended">Películas recomendadas</button>
+      <select name="" id="filter">
+        <option value="all">Todas</option>
+        <option value="most-valued">Más valoradas</option>
+        <option value="least-valued">Menos valoradas</option>
+      </select>
+    </div>
+  </section>
+  <div class="wrapper">
+    <section class="movie-list" id="container">
+      <article class="movie recommended">
+        <img class="movie-poster" src="//image.tmdb.org/t/p/w220_and_h330_face/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg" alt="">
+        <p class="movie-title">Duro de matar</p>
+        <p class="movie-id">123456</p>
+        <span class="movie-rate">10</span>
+      </article>
+    </section>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
