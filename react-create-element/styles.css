@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: system-ui;
+  color: #2c2e31;
+}
+
+.wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.user {
+  background-image: linear-gradient(to bottom, #f9f9f9 0%, #f9f9f9 130px,rgba(0,0,0,.15) 130px, rgba(0,0,0,.15) 131px, white 131px, white 100%);
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  font-family: system-ui;
+  border-radius: .3rem;
+  box-shadow: 0 0 1px rgba(0,0,0,.5);
+  cursor: pointer;
+  user-select: none;
+}
+
+.user img {
+  max-width: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 2px black;
+}
+
