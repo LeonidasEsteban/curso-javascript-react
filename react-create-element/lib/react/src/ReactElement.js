@@ -8,8 +8,17 @@ function renderChildren(children, container) {
   return render(children, container)
 }
 
+function setEvents(element, event, callback) {
+  return element.addEventListener(event, callback)
+}
 
 function setProperties(prop, value, element) {
+  // events support
+  if(prop.startsWith('on')) {
+    const event = prop.replace('on','').toLowerCase()
+    return setEvents(element, event, value)
+  }
+
   // support for children
   if (prop === 'children') {
     return renderChildren(value, element)
