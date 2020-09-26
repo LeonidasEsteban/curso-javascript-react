@@ -12,13 +12,23 @@ const elements = [
   'header'
 ]
 
+function buildStyles(strings, dynamicValues, props) {
+  let style = strings.slice()
+  dynamicValues.forEach((value, index) => {
+    style[index] += value(props)
+  })
+
+  return style.join('')
+}
+
 
 elements.forEach((tag) => {
-  styled[tag] = function (styles) {
+  styled[tag] = function (strings, ...dynamicValues) {
     return function (props, content) {
+      const style = buildStyles(strings, dynamicValues, props)
       return createElement(tag, {
         ...props,
-        style: styles,
+        style,
       }, content)
 
     }
