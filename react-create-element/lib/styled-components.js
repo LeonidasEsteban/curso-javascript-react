@@ -1,30 +1,31 @@
-const styled = {
-  h1: function (styles) {
-    return function (content) {
-      return `
-        <h1 style="${styles}">
-          ${content}
-        </h1>
-      `
+import { createElement } from './react/index.js'
+
+const styled = {}
+
+const elements = [
+  'h1',
+  'p',
+  'div',
+  'img',
+  'article',
+  'footer',
+  'header'
+]
+
+
+elements.forEach((tag) => {
+  styled[tag] = function (styles) {
+    return function (props, content) {
+      return createElement(tag, {
+        ...props,
+        style: styles,
+      }, content)
+
     }
-  },
-  div: function (styles) {
-    return function (content) {
-      return `
-        <div style="${styles}">
-          ${content}
-        </div>
-      `
-    }
-  },
-  img: function (styles) {
-    return function (content) {
-      return `
-        <img style="${styles}" ${content} />
-      `
-    }
-  },
-}
+  }
+})
+
+
 
 
 export default styled
