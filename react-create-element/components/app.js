@@ -17,7 +17,8 @@ class App extends Component {
         children: [
           new User({
             name: 'Ash',
-            avatar: './images/ash.jpg'
+            avatar: './images/ash.jpg',
+            age: 10,
           })
         ]
       })
