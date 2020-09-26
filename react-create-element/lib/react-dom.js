@@ -7,8 +7,9 @@ function render(element, container) {
     childElement = newChild
   }
   element.update = reRender
-  let childElement = element.render()
+  let childElement = element.build()
   container.append(childElement)
+  element.componentDidMount()
 }
 
 

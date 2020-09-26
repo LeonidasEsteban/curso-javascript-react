@@ -6,6 +6,16 @@ class Component {
   update() {}
   #updater(){
     this.update(this.render())
+    this.componentDidUpdate()
+  }
+  // se llama andes que se renderice el componente
+  componentWillMount() {
+
+  }
+  componentDidMount() {
+
+  }
+  componentDidUpdate() {
 
   }
   setState(newState) {
@@ -14,6 +24,10 @@ class Component {
       ...newState
     }
     this.#updater()
+  }
+  build() {
+    this.componentWillMount()
+    return this.render()
   }
 }
 

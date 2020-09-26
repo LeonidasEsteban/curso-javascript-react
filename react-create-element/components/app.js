@@ -4,10 +4,7 @@ import Wrapper from './wrapper.js'
 // import UserStyled from './user-styled.js'
 
 
-const element = createElement('h1', {
-  class: 'title',
-}, 'Hola mundo desde create element!')
-console.log(element)
+
 
 class App extends Component {
   render() {

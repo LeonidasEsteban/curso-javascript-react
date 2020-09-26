@@ -1,8 +1,18 @@
 import { Component, createElement } from '../lib/react/index.js'
 
 class User extends Component {
+  displayName = 'User'
   state = {
     age: this.props.age
+  }
+  componentDidMount() {
+    console.log(`el componente ${this.displayName} se renderizó`)
+  }
+  componentWillMount() {
+    console.log(`el componente ${this.displayName} se va a renderizar por primera vez`)
+  }
+  componentDidUpdate() {
+    console.log(`el componente ${this.displayName} se actualizó`)
   }
   // constructor(props) {
   //   super(props)
@@ -18,6 +28,7 @@ class User extends Component {
     })
   }
   render() {
+
     const { avatar, name } = this.props
     const { age } = this.state
     return createElement('div', {
