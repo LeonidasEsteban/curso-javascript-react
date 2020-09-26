@@ -1,5 +1,9 @@
 function render(element, container) {
-  container.innerHTML = element.render()
+  if (typeof element === 'string' || element instanceof Element) {
+    return container.append(element)
+  }
+  const childElement = element.render()
+  container.append(childElement)
 }
 
 
