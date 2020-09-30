@@ -25,7 +25,10 @@ const reducer = (state, { type, payload }) => {
       }
     }
     case SET_FILTER:
-      return state
+      return {
+        ...state,
+        filter: payload,
+      }
     default:
       return state
   }
