@@ -69,13 +69,13 @@ body {
   border-radius: .5em;
 } */
 
-.movie-list {
+/* .movie-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 200px);
   justify-content: center;
   box-sizing: border-box;
   gap: 1em;
-}
+} */
 
 
 .movie {
